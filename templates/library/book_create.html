@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Create</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #2C3E50;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        label {
+            font-size: 1em;
+            color: #34495e;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #dcdde1;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 1em;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            font-size: 1em;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        p {
+            color: red;
+            font-size: 1em;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Створення книги</h1>
+        {% if error %}
+            <p>{{ error }}</p>
+        {% endif %}
+        <form method="POST">
+            <label for="author">Ім'я автора</label>
+            <input name="author" id="author" required>
+
+            <label for="name">Назва книги</label>
+            <input name="name" id="name" required>
+
+            <label for="pages">Кількість сторінок</label>
+            <input name="pages" id="pages" type="number" required>
+
+            <button type="submit">Створити</button>
+        </form>
+    </div>
+</body>
+</html>

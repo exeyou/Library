@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #2C3E50;
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: block;
+            text-decoration: none;
+            background-color: #3498db;
+            color: white;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            margin: 10px 0;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .button:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Головна сторінка</h1>
+        <a href="/register" class="button">Register</a>
+        <a href="/login" class="button">Login</a>
+        <a href="/books" class="button">Books</a>
+        <a href="/author/create" class="button">Create Author</a>
+        <a href="/book/create" class="button">Create Book</a>
+        <a href="/book/delete" class="button">Delete Book</a>
+        <a href="/book/update" class="button">Update Book</a>
+    </div>
+
+</body>
+</html>
